@@ -1,0 +1,15 @@
+f0(X,Y):-between(11,13,X),
+    between(X,14,Y).
+f0(15,15).
+f1(X,Y):-!,
+    between(11,13,X),
+    between(X,14,Y).
+f1(15,15).
+f2(X,Y):-between(11,13,X),
+    !,
+    between(X,14,Y).
+f2(15,15).
+f3(X,Y):-between(11,13,X),
+    between(X,14,Y),
+    !.
+f3(15,15).

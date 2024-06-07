@@ -1,0 +1,18 @@
+T1			|T2			|TYP		|WARTOŚĆ
+_________________________________________________________________________________________________
+policjant		|policjant		|atom		|true
+Y			|X			|var		|X=Y
+papier			|kartka			|atom		|false
+125			|125			|integer	|true
+rzeczownik(alfa)	|alfa			|compound,atom 	|false
+punkt(A,b,c)		|punkt(A,b,c)		|compound	|true
+litera(C)		|slowo(litera)		|compound	|false
+slowo(C)		|slowo(ania,ewa)	|compound	|false
+jedzie(student,rower)	|jedzie(student,X)	|compound	|X=rower, true
+'student'		|student		|atom		|true
+para(X,Y)		|para(jacek,ewa)	|compound	|X = jacek, Y = ewa
+f(X,X)			|f(a,b)			|compound	|false
+f(X,a(b,c))		|f(Z,a(Z,c))		|compound	|X=Z, Z=b
+fu(a,X,f(g(Y)))		|fu(V,h(Z,V),f(V))	|compound	|false
+fu(a,X,f(g(Y)))		|fu(Y,f(Z),f(Z))	|compound	|X = f(g(a)), Y = a, Z = g(a)
+fu(f(X),Y,a)		|fu(f(g(Y)),c,Z)	|compound	|X = g(c), Y = c, Z = a
